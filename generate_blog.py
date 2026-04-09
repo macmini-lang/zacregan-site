@@ -202,6 +202,25 @@ def make_index(videos):
 </html>'''
 
 
+def make_sitemap(videos):
+    base = "https://zacregan.com"
+    today = datetime.now().strftime('%Y-%m-%d')
+    urls = [
+        (f'{base}/', today, '1.0'),
+        (f'{base}/blog/', today, '0.9'),
+    ]
+    for v in videos:
+        slug = slugify(v['title'])
+        urls.append((f'{base}/blog/{slug}/', v['date'], '0.7'))
+
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for loc, mod, pri in urls:
+        xml += f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{mod}</lastmod>\n    <priority>{pri}</priority>\n  </url>\n'
+    xml += '</urlset>\n'
+    return xml
+
+
 if __name__ == "__main__":
     videos = fetch_videos()
     print(f"Found {len(videos)} videos")
@@ -224,5 +243,9 @@ if __name__ == "__main__":
 
     # Always regenerate index (picks up new posts)
     (BLOG_DIR / "index.html").write_text(make_index(videos))
+
+    # Regenerate sitemap
+    Path("sitemap.xml").write_text(make_sitemap(videos))
+    print(f"Sitemap updated with {len(videos) + 2} URLs")
 
     print(f"Done. {new_count} new posts. {len(videos)} total.")
