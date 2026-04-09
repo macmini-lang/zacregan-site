@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Zac Regan</title>
-    <meta name="description" content="Videos and insights on scaling high-ticket products and services with paid advertising.">
+    <meta name="description" content="Paid ads strategy, info product scaling, and capital raising insights from Zac Regan. Real tactics from real ad spend.">
     <link rel="canonical" href="https://zacregan.com/blog/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #FFFFFF; color: #111; -webkit-font-smoothing: antialiased; }
+        body { font-family: 'Inter', sans-serif; background: #FFFFFF; color: #111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
         .bg-dots { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: radial-gradient(circle, rgba(0,0,0,0.12) 1.2px, transparent 1.2px); background-size: 32px 32px; }
         .page { position: relative; z-index: 1; }
         .nav { padding: 18px 0; border-bottom: 2px solid rgba(0,0,0,0.08); }
-        .nav .container { display: flex; align-items: center; justify-content: space-between; }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; padding: 0 20px; }
         .nav img { height: 44px; width: auto; }
-        .nav a.back { font-size: 0.82rem; color: #555; text-decoration: none; }
-        .nav a.back:hover { color: #111; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .blog-header { padding: 48px 0 32px; }
-        .blog-header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; }
-        .posts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; padding-bottom: 60px; }
-        .post-card { border: 2px solid rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; transition: border-color 0.2s, transform 0.15s; }
-        .post-card:hover { border-color: rgba(0,0,0,0.3); transform: translateY(-2px); }
-        .post-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-        .post-info { padding: 16px; }
-        .post-info h2 { font-size: 0.95rem; font-weight: 600; line-height: 1.4; margin-bottom: 4px; }
-        .post-info .date { font-size: 0.75rem; color: #999; }
+        .nav a.home { font-size: 0.82rem; color: #555; text-decoration: none; }
+        .nav a.home:hover { color: #111; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .page-header { padding: 48px 0 32px; }
+        .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; }
+        .page-header p { color: #555; margin-top: 8px; font-size: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; padding-bottom: 60px; }
+        .card { background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s; }
+        .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .thumb { aspect-ratio: 16/9; overflow: hidden; background: #f0f0f0; }
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 16px; }
+        .card-body h2 { font-size: 0.95rem; font-weight: 600; line-height: 1.4; }
         .footer { background: #000; padding: 24px 0; text-align: center; }
         .footer p { font-size: 0.68rem; color: rgba(255,255,255,0.35); }
-        @media (max-width: 600px) { .posts { grid-template-columns: 1fr; } .blog-header h1 { font-size: 1.5rem; } }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .page-header { padding: 32px 0 24px; } }
     </style>
 </head>
 <body>
@@ -41,118 +42,138 @@
     <nav class="nav">
         <div class="container">
             <a href="/"><img src="/logo.png" alt="Zac Regan"></a>
-            <a href="/" class="back">Home</a>
+            <a href="/" class="home">Home</a>
         </div>
     </nav>
     <div class="container">
-        <div class="blog-header">
+        <div class="page-header">
             <h1>Blog</h1>
+            <p>Paid ads strategy, info product scaling, and capital raising — from real ad spend, not theory.</p>
         </div>
-        <div class="posts">
-            <a href="/blog/where-to-put-your-focus-when-scaling/" class="post-card">
-                <img src="https://i.ytimg.com/vi/l4ppTJjWONs/hqdefault.jpg" alt="Where To Put Your Focus When Scaling" loading="lazy">
-                <div class="post-info">
-                    <h2>Where To Put Your Focus When Scaling</h2>
-                    <span class="date">April 03, 2026</span>
-                </div>
+        <div class="grid">
+            <a href="/blog/how-identity-sells-more-than-any-ad-funnel-or-sales-script/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/0jmR-iJuKGo/hqdefault.jpg" alt="How "identity" Sells More Than Any Ad, Funnel, or Sales Script" loading="lazy"></div>
+                <div class="card-body"><h2>How "identity" Sells More Than Any Ad, Funnel, or Sales Script</h2></div>
             </a>
-            <a href="/blog/direct-response-copywriting-101/" class="post-card">
-                <img src="https://i.ytimg.com/vi/lAPGLWUuI54/hqdefault.jpg" alt="Direct Response Copywriting 101" loading="lazy">
-                <div class="post-info">
-                    <h2>Direct Response Copywriting 101</h2>
-                    <span class="date">April 01, 2026</span>
-                </div>
+            <a href="/blog/how-top-fund-managers-use-paid-ads-to-raise-capital/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/4fJ69XNmGqU/hqdefault.jpg" alt="How Top Fund Managers Use Paid Ads to Raise Capital" loading="lazy"></div>
+                <div class="card-body"><h2>How Top Fund Managers Use Paid Ads to Raise Capital</h2></div>
             </a>
-            <a href="/blog/understanding-market-sophistication-for-paid-ads-101/" class="post-card">
-                <img src="https://i.ytimg.com/vi/wHfjWiEBCsU/hqdefault.jpg" alt="Understanding Market Sophistication For Paid Ads 101" loading="lazy">
-                <div class="post-info">
-                    <h2>Understanding Market Sophistication For Paid Ads 101</h2>
-                    <span class="date">March 27, 2026</span>
-                </div>
+            <a href="/blog/how-to-sign-100k-clients-from-paid-ads-info-services-and-funds/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/5igCd2sZAu8/hqdefault.jpg" alt="How to Sign $100k+ Clients From Paid Ads (info, Services, and Funds)" loading="lazy"></div>
+                <div class="card-body"><h2>How to Sign $100k+ Clients From Paid Ads (info, Services, and Funds)</h2></div>
             </a>
-            <a href="/blog/how-to-structure-ad-campaigns-at-scale/" class="post-card">
-                <img src="https://i.ytimg.com/vi/nxBXnVIvsX4/hqdefault.jpg" alt="How To Structure Ad Campaigns At Scale" loading="lazy">
-                <div class="post-info">
-                    <h2>How To Structure Ad Campaigns At Scale</h2>
-                    <span class="date">March 25, 2026</span>
-                </div>
+            <a href="/blog/your-ad-says-one-thing-your-funnel-says-another-thats-why-youre-losing/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/63C5HC70mqs/hqdefault.jpg" alt="Your Ad Says One Thing, Your Funnel Says Another... That's Why You're Losing" loading="lazy"></div>
+                <div class="card-body"><h2>Your Ad Says One Thing, Your Funnel Says Another... That's Why You're Losing</h2></div>
             </a>
-            <a href="/blog/what-everyone-gets-wrong-about-working-with-ai-consulting-call/" class="post-card">
-                <img src="https://i.ytimg.com/vi/EsyRSFqimqY/hqdefault.jpg" alt="What Everyone Gets Wrong About Working With Ai (Consulting Call)" loading="lazy">
-                <div class="post-info">
-                    <h2>What Everyone Gets Wrong About Working With Ai (Consulting Call)</h2>
-                    <span class="date">March 22, 2026</span>
-                </div>
+            <a href="/blog/how-much-does-it-cost-to-raise-capital-meta-ads-vs-traditional/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/8pwxldMvRNg/hqdefault.jpg" alt="How Much Does It Cost to Raise Capital? (meta Ads vs Traditional)" loading="lazy"></div>
+                <div class="card-body"><h2>How Much Does It Cost to Raise Capital? (meta Ads vs Traditional)</h2></div>
             </a>
-            <a href="/blog/the-unfair-advantage-successful-funds-are-using-now/" class="post-card">
-                <img src="https://i.ytimg.com/vi/RBeum6nPwZM/hqdefault.jpg" alt="The Unfair Advantage Successful Funds Are Using Now" loading="lazy">
-                <div class="post-info">
-                    <h2>The Unfair Advantage Successful Funds Are Using Now</h2>
-                    <span class="date">March 20, 2026</span>
-                </div>
+            <a href="/blog/3-reasons-to-run-paid-ads-even-if-you-turn-them-off-after-1-month/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/9Q9glWHEY64/hqdefault.jpg" alt="3 Reasons to Run Paid Ads Even if You Turn Them Off After 1 Month" loading="lazy"></div>
+                <div class="card-body"><h2>3 Reasons to Run Paid Ads Even if You Turn Them Off After 1 Month</h2></div>
             </a>
-            <a href="/blog/if-your-info-business-is-contracting-heres-what-to-do/" class="post-card">
-                <img src="https://i.ytimg.com/vi/tmcIWrAXTSM/hqdefault.jpg" alt="If Your Info Business Is Contracting Here'S What To Do" loading="lazy">
-                <div class="post-info">
-                    <h2>If Your Info Business Is Contracting Here'S What To Do</h2>
-                    <span class="date">March 18, 2026</span>
-                </div>
+            <a href="/blog/the-trust-recession-is-fake-and-heres-whats-actually-happening/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/bKk1YRRIOlQ/hqdefault.jpg" alt="The "trust Recession" is Fake and Here's What's Actually Happening" loading="lazy"></div>
+                <div class="card-body"><h2>The "trust Recession" is Fake and Here's What's Actually Happening</h2></div>
             </a>
-            <a href="/blog/scaling-a-20k-info-product-ad-budget-in-2026-consulting-call/" class="post-card">
-                <img src="https://i.ytimg.com/vi/O6GwzHxYfo8/hqdefault.jpg" alt="Scaling A $20K Info Product Ad Budget In 2026 (Consulting Call)" loading="lazy">
-                <div class="post-info">
-                    <h2>Scaling A $20K Info Product Ad Budget In 2026 (Consulting Call)</h2>
-                    <span class="date">March 15, 2026</span>
-                </div>
+            <a href="/blog/scaling-a-sales-team-past-200k-mo-with-paid-traffic-4-lessons/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/DfXvF69p3wc/hqdefault.jpg" alt="Scaling a Sales Team Past $200k/mo With Paid Traffic (4 Lessons)" loading="lazy"></div>
+                <div class="card-body"><h2>Scaling a Sales Team Past $200k/mo With Paid Traffic (4 Lessons)</h2></div>
             </a>
-            <a href="/blog/why-meta-ads-work-better-than-any-other-channel-for-raising-capital/" class="post-card">
-                <img src="https://i.ytimg.com/vi/P6nbrETWQcM/hqdefault.jpg" alt="Why Meta Ads Work Better Than Any Other Channel For Raising Capital" loading="lazy">
-                <div class="post-info">
-                    <h2>Why Meta Ads Work Better Than Any Other Channel For Raising Capital</h2>
-                    <span class="date">March 13, 2026</span>
-                </div>
+            <a href="/blog/what-metas-andromeda-update-actually-means-for-info-product-advertisers/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/DkCvr4HTjVM/hqdefault.jpg" alt="What Meta's Andromeda Update Actually Means for Info Product Advertisers" loading="lazy"></div>
+                <div class="card-body"><h2>What Meta's Andromeda Update Actually Means for Info Product Advertisers</h2></div>
             </a>
-            <a href="/blog/how-much-does-it-cost-to-raise-capital-meta-ads-vs-traditional/" class="post-card">
-                <img src="https://i.ytimg.com/vi/8pwxldMvRNg/hqdefault.jpg" alt="How Much Does It Cost To Raise Capital? (Meta Ads Vs Traditional)" loading="lazy">
-                <div class="post-info">
-                    <h2>How Much Does It Cost To Raise Capital? (Meta Ads Vs Traditional)</h2>
-                    <span class="date">March 11, 2026</span>
-                </div>
+            <a href="/blog/why-most-agencies-make-terrible-decisions-and-what-to-do-instead/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/DRpoYnpcvIg/hqdefault.jpg" alt="Why Most Agencies Make Terrible Decisions (and What to Do Instead)" loading="lazy"></div>
+                <div class="card-body"><h2>Why Most Agencies Make Terrible Decisions (and What to Do Instead)</h2></div>
             </a>
-            <a href="/blog/facebook-ads-not-working-heres-what-to-do-next/" class="post-card">
-                <img src="https://i.ytimg.com/vi/dtd5wBgCXuU/hqdefault.jpg" alt="Facebook Ads Not Working? Here'S What To Do Next" loading="lazy">
-                <div class="post-info">
-                    <h2>Facebook Ads Not Working? Here'S What To Do Next</h2>
-                    <span class="date">March 06, 2026</span>
-                </div>
+            <a href="/blog/facebook-ads-not-working-heres-what-to-do-next/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/dtd5wBgCXuU/hqdefault.jpg" alt="Facebook Ads Not Working? Here's What to Do Next" loading="lazy"></div>
+                <div class="card-body"><h2>Facebook Ads Not Working? Here's What to Do Next</h2></div>
             </a>
-            <a href="/blog/how-top-fund-managers-use-paid-ads-to-raise-capital/" class="post-card">
-                <img src="https://i.ytimg.com/vi/4fJ69XNmGqU/hqdefault.jpg" alt="How Top Fund Managers Use Paid Ads To Raise Capital" loading="lazy">
-                <div class="post-info">
-                    <h2>How Top Fund Managers Use Paid Ads To Raise Capital</h2>
-                    <span class="date">March 04, 2026</span>
-                </div>
+            <a href="/blog/the-risk-mindset-that-separates-100k-mo-businesses-from-everyone-else/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/eKY4_j3pODg/hqdefault.jpg" alt="The Risk Mindset That Separates $100k/mo Businesses From Everyone Else" loading="lazy"></div>
+                <div class="card-body"><h2>The Risk Mindset That Separates $100k/mo Businesses From Everyone Else</h2></div>
             </a>
-            <a href="/blog/why-most-agencies-make-terrible-decisions-and-what-to-do-instead/" class="post-card">
-                <img src="https://i.ytimg.com/vi/DRpoYnpcvIg/hqdefault.jpg" alt="Why Most Agencies Make Terrible Decisions (And What To Do Instead)" loading="lazy">
-                <div class="post-info">
-                    <h2>Why Most Agencies Make Terrible Decisions (And What To Do Instead)</h2>
-                    <span class="date">February 25, 2026</span>
-                </div>
+            <a href="/blog/what-everyone-gets-wrong-about-working-with-ai-consulting-call/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/EsyRSFqimqY/hqdefault.jpg" alt="What Everyone Gets Wrong About Working With Ai (consulting Call)" loading="lazy"></div>
+                <div class="card-body"><h2>What Everyone Gets Wrong About Working With Ai (consulting Call)</h2></div>
             </a>
-            <a href="/blog/how-identity-sells-more-than-any-ad-funnel-or-sales-script/" class="post-card">
-                <img src="https://i.ytimg.com/vi/0jmR-iJuKGo/hqdefault.jpg" alt="How "Identity" Sells More Than Any Ad, Funnel, Or Sales Script" loading="lazy">
-                <div class="post-info">
-                    <h2>How "Identity" Sells More Than Any Ad, Funnel, Or Sales Script</h2>
-                    <span class="date">February 18, 2026</span>
-                </div>
+            <a href="/blog/we-spend-15-30k-in-month-1-testing-heres-how-we-dont-lose-it-all/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/grNgiRmkTcM/hqdefault.jpg" alt="We Spend $15-30k in Month 1 Testing... Here's How We Don't Lose It All" loading="lazy"></div>
+                <div class="card-body"><h2>We Spend $15-30k in Month 1 Testing... Here's How We Don't Lose It All</h2></div>
             </a>
-            <a href="/blog/why-your-prospects-no-show-cancel-and-object-the-trust-ladder/" class="post-card">
-                <img src="https://i.ytimg.com/vi/PqySli3pf6M/hqdefault.jpg" alt="Why Your Prospects No-Show, Cancel, And Object (The Trust Ladder)" loading="lazy">
-                <div class="post-info">
-                    <h2>Why Your Prospects No-Show, Cancel, And Object (The Trust Ladder)</h2>
-                    <span class="date">February 11, 2026</span>
-                </div>
+            <a href="/blog/why-someone-who-started-after-you-will-scale-60x-faster/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/JA6TiY4TP-E/hqdefault.jpg" alt="Why Someone Who Started After You Will Scale 60x Faster" loading="lazy"></div>
+                <div class="card-body"><h2>Why Someone Who Started After You Will Scale 60x Faster</h2></div>
+            </a>
+            <a href="/blog/why-organic-only-info-businesses-plateau-and-when-to-flip-to-paid/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/KcMIIO9O5HM/hqdefault.jpg" alt="Why Organic-only Info Businesses Plateau (and When to Flip to Paid)" loading="lazy"></div>
+                <div class="card-body"><h2>Why Organic-only Info Businesses Plateau (and When to Flip to Paid)</h2></div>
+            </a>
+            <a href="/blog/where-to-put-your-focus-when-scaling/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/l4ppTJjWONs/hqdefault.jpg" alt="Where to Put Your Focus When Scaling" loading="lazy"></div>
+                <div class="card-body"><h2>Where to Put Your Focus When Scaling</h2></div>
+            </a>
+            <a href="/blog/direct-response-copywriting-101/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/lAPGLWUuI54/hqdefault.jpg" alt="Direct Response Copywriting 101" loading="lazy"></div>
+                <div class="card-body"><h2>Direct Response Copywriting 101</h2></div>
+            </a>
+            <a href="/blog/how-to-structure-ad-campaigns-at-scale/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/nxBXnVIvsX4/hqdefault.jpg" alt="How to Structure Ad Campaigns at Scale" loading="lazy"></div>
+                <div class="card-body"><h2>How to Structure Ad Campaigns at Scale</h2></div>
+            </a>
+            <a href="/blog/scaling-a-20k-info-product-ad-budget-in-2026-consulting-call/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/O6GwzHxYfo8/hqdefault.jpg" alt="Scaling a $20k Info Product Ad Budget in 2026 (consulting Call)" loading="lazy"></div>
+                <div class="card-body"><h2>Scaling a $20k Info Product Ad Budget in 2026 (consulting Call)</h2></div>
+            </a>
+            <a href="/blog/why-meta-ads-work-better-than-any-other-channel-for-raising-capital/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/P6nbrETWQcM/hqdefault.jpg" alt="Why Meta Ads Work Better Than Any Other Channel for Raising Capital" loading="lazy"></div>
+                <div class="card-body"><h2>Why Meta Ads Work Better Than Any Other Channel for Raising Capital</h2></div>
+            </a>
+            <a href="/blog/why-your-prospects-no-show-cancel-and-object-the-trust-ladder/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/PqySli3pf6M/hqdefault.jpg" alt="Why Your Prospects No-show, Cancel, and Object (the Trust Ladder)" loading="lazy"></div>
+                <div class="card-body"><h2>Why Your Prospects No-show, Cancel, and Object (the Trust Ladder)</h2></div>
+            </a>
+            <a href="/blog/how-to-launch-high-ticket-info-into-paid-ads-after-spending-600k-in-2025/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/QDNbnA-Visw/hqdefault.jpg" alt="How to Launch High Ticket Info Into Paid Ads After Spending $600k in 2025" loading="lazy"></div>
+                <div class="card-body"><h2>How to Launch High Ticket Info Into Paid Ads After Spending $600k in 2025</h2></div>
+            </a>
+            <a href="/blog/the-unfair-advantage-successful-funds-are-using-now/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/RBeum6nPwZM/hqdefault.jpg" alt="The Unfair Advantage Successful Funds Are Using Now" loading="lazy"></div>
+                <div class="card-body"><h2>The Unfair Advantage Successful Funds Are Using Now</h2></div>
+            </a>
+            <a href="/blog/if-your-info-business-is-contracting-heres-what-to-do/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/tmcIWrAXTSM/hqdefault.jpg" alt="If Your Info Business is Contracting Here's What to Do" loading="lazy"></div>
+                <div class="card-body"><h2>If Your Info Business is Contracting Here's What to Do</h2></div>
+            </a>
+            <a href="/blog/advertiser-reveals-1-copy-mistake-youre-probably-making/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/u2zi2Dg1ORo/hqdefault.jpg" alt="Advertiser Reveals #1 "copy Mistake" You're Probably Making" loading="lazy"></div>
+                <div class="card-body"><h2>Advertiser Reveals #1 "copy Mistake" You're Probably Making</h2></div>
+            </a>
+            <a href="/blog/the-2-pillars-that-determine-if-your-info-product-hits-100k-mo-or-not/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/vrX498T-oSY/hqdefault.jpg" alt="The 2 Pillars That Determine if Your Info Product Hits $100k/mo or Not" loading="lazy"></div>
+                <div class="card-body"><h2>The 2 Pillars That Determine if Your Info Product Hits $100k/mo or Not</h2></div>
+            </a>
+            <a href="/blog/understanding-market-sophistication-for-paid-ads-101/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/wHfjWiEBCsU/hqdefault.jpg" alt="Understanding Market Sophistication for Paid Ads 101" loading="lazy"></div>
+                <div class="card-body"><h2>Understanding Market Sophistication for Paid Ads 101</h2></div>
+            </a>
+            <a href="/blog/how-to-3x-your-roas-without-touching-your-ads-backend-monetization/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/wYCMmllw1Ko/hqdefault.jpg" alt="How to 3x Your ROAS Without Touching Your Ads (backend Monetization)" loading="lazy"></div>
+                <div class="card-body"><h2>How to 3x Your ROAS Without Touching Your Ads (backend Monetization)</h2></div>
+            </a>
+            <a href="/blog/72k-on-a-coaching-program-because-of-one-thing-context/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/xUvOmdINMzc/hqdefault.jpg" alt="$72k on a Coaching Program Because of One Thing (context)" loading="lazy"></div>
+                <div class="card-body"><h2>$72k on a Coaching Program Because of One Thing (context)</h2></div>
+            </a>
+            <a href="/blog/how-we-compress-sales-cycles-from-12-weeks-to-under-4-paid-ads/" class="card">
+                <div class="thumb"><img src="https://i.ytimg.com/vi/zRbUBa5R0Vg/hqdefault.jpg" alt="How We Compress Sales Cycles From 12 Weeks to Under 4 (paid Ads)" loading="lazy"></div>
+                <div class="card-body"><h2>How We Compress Sales Cycles From 12 Weeks to Under 4 (paid Ads)</h2></div>
             </a>
         </div>
     </div>
