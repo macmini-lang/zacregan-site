@@ -420,23 +420,53 @@ def write_post_page(video):
 
 
 def collect_all_posts():
-    """Return list of (slug, mtime_iso) for every blog/<slug>/index.html on disk."""
+    """Return list of dicts for every blog/<slug>/index.html on disk.
+    Reads each file once to extract title, video id, thumbnail, and date so the
+    index page can render real data for posts that aren't in the current RSS."""
     posts = []
     if not BLOG_DIR.exists():
         return posts
     for child in sorted(BLOG_DIR.iterdir()):
-        if child.is_dir() and (child / "index.html").exists():
-            mtime = datetime.fromtimestamp(
-                (child / "index.html").stat().st_mtime, tz=timezone.utc
-            )
-            posts.append({"slug": child.name, "mtime": mtime})
+        index_path = child / "index.html"
+        if not (child.is_dir() and index_path.exists()):
+            continue
+        mtime = datetime.fromtimestamp(index_path.stat().st_mtime, tz=timezone.utc)
+        try:
+            content = index_path.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            content = ""
+
+        title_match = re.search(r"<title>([^<]+)</title>", content)
+        title = (
+            title_match.group(1).replace(" | Zac Regan", "").strip()
+            if title_match else humanize_slug(child.name)
+        )
+        vid_match = re.search(r"i\.ytimg\.com/vi/([A-Za-z0-9_-]+)/", content)
+        video_id = vid_match.group(1) if vid_match else None
+        thumbnail = f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg" if video_id else ""
+
+        date_match = (
+            re.search(r'"datePublished"\s*:\s*"([^"]+)"', content)
+            or re.search(r'"uploadDate"\s*:\s*"([^"]+)"', content)
+        )
+        published = date_match.group(1) if date_match else mtime.isoformat()
+
+        posts.append({
+            "slug": child.name,
+            "mtime": mtime,
+            "title": title,
+            "video_id": video_id,
+            "thumbnail": thumbnail,
+            "published": published,
+        })
     return posts
 
 
 def write_index(videos):
     """Render blog/index.html with cards for the latest 15 RSS videos plus
-    any additional existing posts on disk (older manual posts)."""
-    # Map of slug -> card data, using video data when available.
+    any additional existing posts on disk (older posts). Existing posts use
+    metadata extracted from their HTML so titles and thumbnails are accurate."""
+    # Map of slug -> card data, using current RSS data when available (most accurate).
     by_slug = {}
     for v in videos:
         by_slug[v["slug"]] = {
@@ -445,14 +475,14 @@ def write_index(videos):
             "thumbnail": v["thumbnail"],
             "published": v["published"],
         }
-    # Add disk-only posts (manual or older auto-posts) without thumbnails / dates.
+    # Merge in disk-only posts using metadata extracted from their HTML files.
     for p in collect_all_posts():
         if p["slug"] not in by_slug:
             by_slug[p["slug"]] = {
                 "slug": p["slug"],
-                "title": humanize_slug(p["slug"]),
-                "thumbnail": "",  # unknown
-                "published": p["mtime"].isoformat(),
+                "title": p["title"],
+                "thumbnail": p["thumbnail"],
+                "published": p["published"],
             }
 
     # Sort newest first by published date.
