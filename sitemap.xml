@@ -126,6 +126,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zacregan.com/blog/scaling-is-hard-until-you-build-systems-like-this/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://zacregan.com/blog/scaling-to-100k-mo-is-easy-just-do-this/</loc>
     <lastmod>2026-05-08</lastmod>
     <priority>0.7</priority>
